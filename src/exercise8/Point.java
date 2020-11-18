@@ -1,35 +1,51 @@
 package exercise8;
 
 public class Point {
-    // Define attributes
+   public double x;
+   public double y;
 
     public Point() {
-        // Initialize attributes to 0
+        x = 0;
+        y = 0;
     }
 
     public Point(double x, double y) {
-        // Initialize attributes by coping x and y parameters
+        x = x;
+        y = y;
     }
 
     public Point(Point otherPoint) {
-        // Initialize attributes by coping attributes of otherPoint
+        x = x;
+        y = y;
     }
 
     public void initialize() {
-        // Change attributes through console
+       System.out.print("Enter x: ");
+       x = INPUT.nextDouble();
+       System.out.println();
+       System.out.print("Enter y: ");
+       y = INPUT.nextDouble();
+       System.out.println();
     }
 
     public void translate(double xDelta, double yDelta) {
-        // Change attributes by adding xDelta and yDelta
+        System.out.println("Enter coordinates for translation: ");
+        System.out.print("x: ");
+        x = INPUT.nextDouble;
+        System.out.println();
+        System.out.print("y: ");
+        y = INPUT.nextDouble;
+        System.out.println();
     }
 
     public Point createNewTranslatedPoint(double xDelta, double yDelta) {
-        // Create new point which is translated relative to this point
+        Point pointTranslated = new Point();
+        translate(x, y);
         return null;
     }
 
     public boolean equals(Point otherPoint) {
-        // Compare attributes of this point to attributes of otherPoint for equality
+        
         return false;
     }
 
