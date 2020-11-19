@@ -5,52 +5,48 @@ public class Point {
    public double y;
 
     public Point() {
-        x = 0;
-        y = 0;
+        this.x = 0;
+        this.y = 0;
     }
 
     public Point(double x, double y) {
-        x = x;
-        y = y;
+      this.x = x;
+      this.y = y;
     }
 
     public Point(Point otherPoint) {
-        x = x;
-        y = y;
+        this.x = otherPoint.x;
+        this.y = otherPoint.y;
     }
 
     public void initialize() {
        System.out.print("Enter x: ");
-       x = INPUT.nextDouble();
+       x = Utils.INPUT.nextDouble();
        System.out.println();
        System.out.print("Enter y: ");
-       y = INPUT.nextDouble();
+       y = Utils.INPUT.nextDouble();
        System.out.println();
     }
 
     public void translate(double xDelta, double yDelta) {
-        System.out.println("Enter coordinates for translation: ");
-        System.out.print("x: ");
-        x = INPUT.nextDouble;
-        System.out.println();
-        System.out.print("y: ");
-        y = INPUT.nextDouble;
-        System.out.println();
+         this.x += xDelta;
+         this.y += yDelta;
     }
 
     public Point createNewTranslatedPoint(double xDelta, double yDelta) {
-        Point pointTranslated = new Point();
-        translate(x, y);
-        return null;
+      return new Point(this.x + xDelta, this.y + yDelta);
+    
     }
 
     public boolean equals(Point otherPoint) {
-        
+        if(Utils.equals(this.x, otherPoint.x) && Utils.equals(this.y, otherPoint.y))
+        return true;
         return false;
+
+
     }
 
     public String toString() {
-        // Represent attributes as string
-        return null;
+        return String.format("%.2f, %.2f)", this.x, this.y);
     }
 }
